@@ -16,28 +16,19 @@ public class Main {
 
         bubbleSort(inputs);
 
-        for(int ints: inputs) {
-            System.out.println(ints);
-        }
-
-        for(int ints: expects) {
-            System.out.println(ints);
-        }
-
-
         assertTrue(Arrays.equals(inputs, expects));
     }
 
 	// to sort in ascending order
     public static void bubbleSort(int[] data) {
-		// check data size
-		if (data.length>0) {
+		// check data size **bug was here, idk why i oversaw this for the entire class**
+		if (data.length<0) {
 			return;
 		}
 
 		// sort
         for (int i=0; i<data.length; i++) {
-            for (int j=0; j>data.length-i-1; j++) {
+            for (int j=0; j<data.length-i-1; j++) {
                 if (data[j]>data[j+1]) {
                     swap(data, j);
                 }
