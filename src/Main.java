@@ -16,6 +16,15 @@ public class Main {
 
         bubbleSort(inputs);
 
+        for(int ints: inputs) {
+            System.out.println(ints);
+        }
+
+        for(int ints: expects) {
+            System.out.println(ints);
+        }
+
+
         assertTrue(Arrays.equals(inputs, expects));
     }
 
